@@ -12,16 +12,18 @@
     <link rel="stylesheet" href="..\css\cart.css">
     <link rel="icon" href=".\images\Techxpert.png" type="image/jng">
     <script src="..\js\script.js" defer></script>
-    <script src="..\js\animation.js" defer></script>
     <script src="/js/search.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="nav">
+            <!-- Hamburger Icon for Mobile -->
             <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
+
+            <!-- Logo -->
             <a href="/main.html" class="logo">Tech Xpert</a>
-    
+
             <!-- Navbar contents -->
             <ul class="nav-links" id="navLinks">
                 <i class="uil uil-times navCloseBtn" id="navCloseBtn"></i>
@@ -29,22 +31,23 @@
                 <li><a href="category.html">Categories</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
-    
+
             <!-- Search bar -->
-    
+            <!-- Search bar -->
+            <div class="search-container">
+                <a href="/search.html"><i class="uil uil-search search-icon" id="searchIcon"></i></a>
+            </div>
+
             <!-- Profile image -->
             <div class="profile-container">
-                <a href="#" id="profileIcon">
-                    <img src=".\images\Techxpert.png" alt="Profile Icon" class="profile-icon">
+                <a href="/profile/student-profile.html" id="profileIcon">
+                    <img src="\images\Techxpert.png" alt="Profile Icon" class="profile-icon">
                 </a>
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="/profile/student-profile.html">Profile</a>
-                </div>
             </div>
         </nav>
     </header><br><br><br><br><br>
-     <!-- search content results -->
-     
+    <!-- search content results -->
+
 
     <main class="main">
         <h2>Shopping Cart</h2><br><br>
@@ -110,11 +113,11 @@
 
 
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
-    
+
 
     <!-- Last Section -->
 
-<br><br><br>
+    <br><br><br>
     <div class="amount">
         <div class="item-price">
             <b class="text-total">Total</b><br><br>
@@ -137,6 +140,8 @@
             </div>
         </div> -->
     </div>
+
+    <script src="/js/humberger.js"></script>
 </body>
 
 </html>

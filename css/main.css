@@ -23,7 +23,6 @@ body {
 
 a{
   text-decoration: none;
-  color: #fff;
 }
 
 
@@ -182,6 +181,10 @@ a{
 /* Profile & Search Icons */
 .profile-container, .search-container {
   position: relative;
+}
+
+.search-container a{
+  color: white;
 }
 
 .profile-icon {

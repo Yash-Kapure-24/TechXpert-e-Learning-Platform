@@ -7,16 +7,16 @@
     <title>Tech Xpert</title>
     <!-- <link rel="stylesheet" href="..\css\style.css" /> -->
     <link rel="stylesheet" href="..\css\main.css" />
-    <link rel="stylesheet" href="..\css\animation.css">
     <!-- Unicons CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-    <script src="..\js\script.js" defer></script>
-    <script src="..\js\animation.js" defer></script>
+    <script src="\js\script.js" defer></script>
+    <script src="\js\animation.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="icon" href=".\images\Techxpert.png" type="image/jng">
     <script src="/js/search.js"></script>
+
 </head>
 
 <body>
@@ -32,7 +32,10 @@
 
     <header>
         <nav class="nav">
+            <!-- Hamburger Icon for Mobile -->
             <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
+
+            <!-- Logo -->
             <a href="/main.html" class="logo">Tech Xpert</a>
 
             <!-- Navbar contents -->
@@ -45,71 +48,38 @@
 
             <!-- Search bar -->
             <div class="search-container">
-                <i class="uil uil-search search-icon" id="searchIcon"></i>
-
+                <a href="/search.html"><i class="uil uil-search search-icon" id="searchIcon"></i></a>
             </div>
 
             <!-- Profile image -->
             <div class="profile-container">
-                <a href="#" id="profileIcon">
-                    <img src=".\images\Techxpert.png" alt="Profile Icon" class="profile-icon">
+                <a href="/profile/student-profile.html" id="profileIcon">
+                    <img src="\images\Techxpert.png" alt="Profile Icon" class="profile-icon">
                 </a>
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="/profile/student-profile.html" style="color: #000000;margin-top: 0px;">Profile</a>
-                </div>
             </div>
         </nav>
     </header>
-    <div class="search-box" id="searchBox">
-        <input type="text" id="searchInput" placeholder="Search for items...">
-    </div>
-    <!-- search containes start -->
 
-    <!-- <div class="item-container" id="itemContainer">
-        <div class="item">Apple</div>
-        <div class="item">Banana</div>
-        <div class="item">Cherry</div>
-        <div class="item">Date</div>
-        <div class="item">Elderberry</div>
-        <div class="item">Fig</div>
-        <div class="item">Grape</div>
-        <div class="item">Honeydew</div>
-    </div> -->
+    <br><br><br><br><br><br>
 
-
-    <div class="no-results" id="noResults">
-        No items match your search.
-    </div>
-
-
-    <!-- search containes end -->
-
-
-    <!-- search content results is not visible , do not make visible  -->
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close-button">&times;</span>
-            <div id="results" class="card-container"></div>
-        </div>
-    </div>
-<br><br><br>
     <!-- header -->
     <section class="header">
         <div class="overlay">
             <div class="left">
-                <h1>Stay Ahead in a Rapidly Changing World<h3><i style="color: rgb(255, 225, 0);"><small>Tech Xpert</small></i></h3>
+                <h1>Stay Ahead in a Rapidly Changing World<h3><i style="color: rgb(255, 225, 0);"><small>Tech
+                                Xpert</small></i></h3>
                 </h1>
                 <br>
                 <p class="desc">
-                    Adapt and thrive with our expert-led courses designed to keep you competitive in today’s fast-paced environment. Learn at your own pace and unlock new opportunities for success!
+                    Adapt and thrive with our expert-led courses designed to keep you competitive in today’s fast-paced
+                    environment. Learn at your own pace and unlock new opportunities for success!
                 </p>
                 <a href="#course">
                     <button class="button">Learn More</button>
                 </a>
             </div>
             <div class="right">
-                <img src="\images\techxpert.png" alt="Techxpert Image" />
+                <img src="\images\Techxpert-1.png" alt="Techxpert Image" />
             </div>
         </div>
     </section>
@@ -129,15 +99,12 @@
                 </div>
             </div>
         </a>
-    </section>
+    </section><br><br><br>
 
-    <section class="course" id="course"><br><br><br><br>
-        <h1 style="color: #000000;">What to learn next</h1><br><br>
-        <p>There is a <b> Coding Section...</b></p><br>
+    <section class="course" id="course">
+        <h1>What to learn next</h1>
+        <p>There is a <b>Coding Section...</b></p><br><br>
         <div class="wrapper">
-
-            <!-- <i id="left" class="fa-solid  fas fa-angle-left" style="visibility: hidden;"></i> -->
-
             <ul class="carousel">
                 <li class="card">
                     <a href="..\courses\course-panel.html">
@@ -145,7 +112,7 @@
                             <img src="https://smartifysol.com/wp-content/uploads/2023/09/development.jpeg" alt=""
                                 draggable="false">
                         </div>
-                        <h2 style="color: #000000; font-weight:bold;">Web Development full Course</h2>
+                        <h2>Web Development full Course</h2>
                         <span>Stephane Maarek...</span><br>
                         <span><b>4.7</b> <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -153,12 +120,9 @@
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"> </span> (206,777)
                         </span>
-
-                        <span><b style="color: azure;">₹549 &nbsp; </b><strike> ₹3,999</strike></span>
-                        <!-- <center><button class="add-card"><a href="cart.html">Add Cart</a></button></center> -->
+                        <span><b class="price">₹549 &nbsp;</b><strike>₹3,999</strike></span>
                     </a>
                 </li>
-
                 <li class="card">
                     <a href="">
                         <div class="img"><img
@@ -244,8 +208,8 @@
                         <span><b style="color: azure;">₹599 &nbsp; </b><strike> ₹2,459</strike></span>
                     </a>
                 </li>
+                <!-- Add more cards here -->
             </ul>
-            <!-- <i id="right" class="fa-solid fas fa-angle-right" style="visibility: hidden;"></i> -->
         </div>
     </section>
 
@@ -434,6 +398,8 @@
     </footer>
 
     </div>
+
 </body>
+<script src="/js/humberger.js"></script>
 
 </html>

@@ -5,89 +5,174 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>category</title>
-  <link rel="stylesheet" href="..\css\style.css" />
-  <link rel="stylesheet" href="..\css\main.css" />
-  <link rel="stylesheet" href="..\css\animation.css">
+  <link rel="stylesheet" href="\css\main.css">
   <!-- Unicons CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <script src="\js\script.js" defer></script>
-  <script src="\js\animation.js" defer></script>
-  <script src="/js/search.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="icon" href=".\images\Techxpert.png" type="image/jng">
   <style>
-    main .skill-section a {
-      color: white;
+    /* category */
+    /* Base styling for skill section */
+    .skill-section {
+      padding-left: 3%;
+      font-size: revert;
     }
 
-    /* Default styles for the main element */
-    main {
-      margin-top: 11%;
+    .skill-section h1 {
+      font-size: 40px;
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 2%;
     }
 
-    /* Media Queries for Responsiveness */
+    .skill-section p {
+      color: #535151;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
 
-    /* For screens smaller than 768px (typical mobile devices) */
-    @media screen and (max-width: 767px) {
-      main {
-        margin-top: 25%;
-        /* Reduced margin for smaller screens */
+    .skill-section .categories {
+      color: #1f1f1f;
+      display: flex;
+      justify-content: center;
+      margin-top: 5%;
+      flex-wrap: wrap;
+    }
+
+    .skill-section .category {
+      background-color: #dbdbdb;
+      border-radius: 20px;
+      padding: 10px 15px;
+      margin: 15px;
+      text-align: center;
+      flex: 1 1 calc(21.333% - 23px);
+      box-sizing: border-box;
+      min-width: 250px;
+      cursor: pointer;
+    }
+
+    .skill-section .category h3 {
+      font-size: 1.5em;
+    }
+
+    .skill-section .category p {
+      font-size: 1.1em;
+    }
+
+    .skill-section .category:hover {
+      background-color: hsl(55, 100%, 75%);
+      color: #000000;
+      transition: 0.3s;
+    }
+
+    /* Responsive design */
+
+    /* Mobile devices - Screens smaller than 767px */
+    @media (max-width: 767px) {
+      .skill-section h1 {
+        font-size: 1.8em;
+        margin-top: 75%;
+        margin-left: 40px;
+      }
+
+      .skill-section p {
+        font-size: 1em;
+        margin-top: 5px;
+        margin-left: 13%;
+      }
+
+      .skill-section .categories {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        margin-left: 20px;
+      }
+
+      .skill-section .category {
+        flex: 1 1 100%;
+        min-width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+      }
+
+      .skill-section .category h3 {
+        font-size: 1.3em;
+      }
+
+      .skill-section .category p {
+        font-size: 1em;
       }
     }
 
-    /* For screens between 768px and 1024px (typical tablets) */
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      main {
-        margin-top: 20%;
-        /* Moderate margin for tablets */
+    /* Tablet devices - Screens between 768px and 1024px */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .skill-section h1 {
+        font-size: 2.5em;
+        margin-top: 60.5%;
+        margin-left: 20px;
       }
-    }
 
-    /* For screens larger than 1024px (typical desktops) */
-    @media screen and (min-width: 1025px) {
-      main {
-        margin-top: 11%;
-        /* Default margin for larger screens */
+      .skill-section p {
+        font-size: 1.1em;
+        padding: 10px
+      }
+
+      .skill-section .categories {
+        justify-content: space-around;
+      }
+
+      .skill-section .category {
+        flex: 1 1 calc(50% - 30px);
+        min-width: 300px;
+        padding: 20px;
+      }
+
+      .skill-section .category h3 {
+        font-size: 1.4em;
+      }
+
+      .skill-section .category p {
+        font-size: 1.1em;
       }
     }
   </style>
+
 </head>
 
 <body>
   <header>
     <nav class="nav">
-        <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
-        <a href="/main.html" class="logo">Tech Xpert</a>
+      <!-- Hamburger Icon for Mobile -->
+      <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
 
-        <!-- Navbar contents -->
-        <ul class="nav-links" id="navLinks">
-            <i class="uil uil-times navCloseBtn" id="navCloseBtn"></i>
-            <li><a href="main.html">Home</a></li>
-            <li><a href="category.html">Categories</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
+      <!-- Logo -->
+      <a href="/main.html" class="logo">Tech Xpert</a>
 
-        <!-- Search bar -->
-        
-           
-        
+      <!-- Navbar contents -->
+      <ul class="nav-links" id="navLinks">
+        <i class="uil uil-times navCloseBtn" id="navCloseBtn"></i>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
 
-        <!-- Profile image -->
-        <div class="profile-container">
-            <a href="#" id="profileIcon">
-                <img src=".\images\Techxpert.png" alt="Profile Icon" class="profile-icon">
-            </a>
-            <div class="dropdown-content" id="dropdownContent">
-              <a href="/profile/student-profile.html" style="color: black; height: 14px;margin-top: -24px; padding-top: 11px; margin-bottom: 0px;">Profile</a>
-            </div>
-        </div>
+      <!-- Search bar -->
+      <div class="search-container">
+        <a href="/search.html"><i class="uil uil-search search-icon" id="searchIcon"></i></a>
+      </div>
+
+      <!-- Profile image -->
+      <div class="profile-container">
+        <a href="/profile/student-profile.html" id="profileIcon">
+          <img src="\images\Techxpert.png" alt="Profile Icon" class="profile-icon">
+        </a>
+      </div>
     </nav>
-</header>
-<div class="search-box" id="searchBox">
-    
-</div>
+  </header><br><br><br><br><br><br><br><br><br><br>
 
 
   <main>
@@ -150,5 +235,8 @@
     </div>
   </main>
 </body>
+<script src="\js\script.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/humberger.js"></script>
 
 </html>

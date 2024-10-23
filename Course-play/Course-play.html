@@ -4,179 +4,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
+    <title>Python Programming Course</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="icon" href="/images/Techxpert.png" type="image/jng">
-    <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+    <link rel="stylesheet" href="..\css\main.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* General Body Styling */
         body {
-            background: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            font-family: Poppins;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        .button {
-            background: #949494;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 12px;
-        }
-
-        .button a {
-            text-decoration: none;
-            color: rgb(0, 0, 0);
+            background: #212121;
+            color: #fff;
+            overflow-x: hidden;
         }
 
         header {
-            margin: 10% 2% 0 2%;
+            text-align: center;
+            padding: 20px;
         }
 
-        main {
-            margin: -30% 2% 0 2%;
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
         }
 
-        .main-video-container .main-video {
-            float: right;
-            margin-top: 0px;
-            margin-bottom: 0px;
+        header small {
+            font-size: 0.8em;
+            color: #ccc;
+            font-weight: 300;
         }
 
-        .rating {
-            text-align: left;
+        .container {
             margin-top: 5%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 10px;
+            gap: 3px;
         }
 
-        .course-details {
-            text-align: left;
-            padding: 0 15%;
+        /* Main Video Section */
+        .main-video-container {
+
+            flex: 3;
+            margin-right: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
-        iframe {
+        .main-video-container iframe {
             width: 100%;
-            max-width: 918px;
-            height: 434px;
-            margin-bottom: -118px;
-            border-radius: 21px;
-            margin-left: 0px;
-            margin-top: -71px;
+            height: 500px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        @media (max-width: 768px) {
-            header {
-                margin: 5% 2% 0 2%;
-            }
-
-            .button {
-                padding: 10px 15px;
-            }
-
-            .course-details {
-                padding: 0 5%;
-            }
-
-            main {
-                margin: -25% 2% 0 2%;
-            }
+        /* Playlist Section */
+        .playlist-container {
+            margin-top: 5%;
+            flex: 1;
+            background-color: #ffffff2e;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 25%;
+            height: 400px;
+            overflow-y: scroll;
         }
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5em;
-                
-            }
-
-            .button {
-                width: 100%;
-                padding: 10px;
-            }
-
-            .course-details {
-                padding: 0 2%;
-            }
-
-            iframe {
-                height: 200px;
-            }
-
-            main {
-                margin: -15% 2% 0 2%;
-            }
+        .playlist-container::-webkit-scrollbar {
+            width: 8px;
         }
 
-        /* Checkbox Styles */
-        .checkbox-container {
-            padding: 50px;
-            margin-top: 20px;
+        .playlist-container::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+
+        .playlist-container::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
+
+        .playlist-item {
             display: flex;
             align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            transition: background 0.3s, transform 0.3s;
         }
 
-        .task {
-            padding: 50px;
-            margin-top: -48px;
+        .playlist-item img {
+            width: 80px;
+            height: 45px;
+            border-radius: 5px;
+            margin-right: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .playlist-item p {
+            font-size: 1em;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .playlist-item:hover {
+            background-color: #e0e0e0;
+            transform: scale(1.05);
+        }
+
+        /* Rating Section */
+        .rating {
+            margin-top: 20px;
+            text-align: left;
+            color: #ffd700;
+            display: contents;
+        }
+
+        .rating p {
+            color: #fff;
+        }
+
+        /* Course Completion Checkbox */
+        .checkbox-container {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            color: #fff;
         }
 
         .checkbox-container input {
             margin-right: 10px;
             transform: scale(1.5);
             cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: -16px;
-            margin-left: 32px;
-            margin-right: 0px;
         }
 
-        .checkbox-container input:checked {
-            transform: scale(1.8);
-            filter: hue-rotate(90deg);
+        .checkbox-container label {
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-video-container {
+                margin-right: 0;
+                width: 100%;
+            }
+
+            .playlist-container {
+                width: 100%;
+                max-width: none;
+                height: 200px;
+                margin-top: 20px;
+            }
+
+            .playlist-item img {
+                width: 60px;
+                height: 35px;
+            }
+
+            .main-video-container iframe {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .playlist-container {
+                height: 150px;
+            }
+
+            .playlist-item p {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 
 <body>
-    <br>
-    <div class="back">
-        <button class="button"><a href="/purches_course/purches_courses.html">Back</a></button>
-    </div>
-    <br>
+
+    <header>
+        <nav class="nav">
+            <!-- Hamburger Icon for Mobile -->
+            <i class="uil uil-bars navOpenBtn" id="navOpenBtn"></i>
+
+            <!-- Logo -->
+            <a href="/main.html" class="logo">Tech Xpert</a>
+
+            <!-- Navbar contents -->
+            <ul class="nav-links" id="navLinks">
+                <i class="uil uil-times navCloseBtn" id="navCloseBtn"></i>
+                <li><a href="/main.html">Home</a></li>
+                <li><a href="/category.html">Categories</a></li>
+                <li><a href="/cart.html">Cart</a></li>
+                <li><a href="/purches_course/purches_courses.html">Your Courses</a></li>
+            </ul>
+
+            <!-- Search bar -->
+            <div class="search-container">
+                <a href="/search.html"><i class="uil uil-search search-icon" id="searchIcon"></i></a>
+            </div>
+
+            <!-- Profile image -->
+            <div class="profile-container">
+                <a href="/profile/student-profile.html" id="profileIcon">
+                    <img src="\images\Techxpert.png" alt="Profile Icon" class="profile-icon">
+                </a>
+            </div>
+        </nav>
+    </header>
+
     <div class="container">
-        <center><iframe width="560" height="315" class="main-video" src="https://www.youtube.com/embed/OKuiyX5k6zg?si=Yo0BR1NMmtQ_rhqm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+        <!-- Main Video Section -->
         <div class="main-video-container">
-            <p class="right" style="text-align: right; margin-top: 10px;">
-            <header>
+            <iframe id="main-video" src="https://www.youtube.com/embed/OKuiyX5k6zg" allowfullscreen></iframe>
+            <h1>Python Full Course <div>for beginners</div>
+            </h1>
+            <!-- Rating Section -->
+            <div class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p>(271,730 ratings)</p>
+                <p>1,222,240 students</p>
+            </div>
 
-                <center><h1>Python Programming Course<small> <i>Beginner to Advance</i></small></h1></center>
-            </header>
+            <!-- Course Completion Checkbox -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="courseComplete">
+                <label for="courseComplete">Course completed</label>
+            </div>
+        </div>
 
-            <main>
-                <span class="course-details">
-                    <p style="margin-top: 28%;"><b>Learn Python, a powerful and beginner-friendly programming language. This course covers core topics like variables, control flow, functions, and basic object-oriented programming. You'll also explore Python's libraries and tools for automation, web development, and data analysis.</b> </p>
-                </span><br>
-
-                <span class="rating">
-                    <p style="margin-top: -468px;">
-                        <span class="fa fa-star checked" style="color: rgb(255, 208, 0);"></span>
-                        <span class="fa fa-star checked" style="color:  rgb(255, 208, 0);"></span>
-                        <span class="fa fa-star checked" style="color:  rgb(255, 208, 0);"></span>
-                        <span class="fa fa-star" style="color:  rgb(255, 208, 0);"></span>
-                        <span class="fa fa-star"></span>
-                    </p>
-                    <p style="margin-top: -1%; margin-left: 0%;">(271,730 ratings)</p>
-                    <p style="margin-left: 0%;">1,222,240 students</p>
-                </span>
-                <!-- Checkbox to confirm course completion -->
-                <div class="checkbox-container">
-                    <input type="checkbox" id="courseComplete" style="margin-left: 1129px;color:#000;">
-                    <label for="courseComplete" style="margin-left: -88px;">Course <br>completed
-                        </label>
-                </div>
-            </main><br>
-            </p>
+        <!-- Playlist Section -->
+        <div class="playlist-container">
+            <div class="playlist-item" data-video="https://www.youtube.com/embed/OKuiyX5k6zg">
+                <img src="https://img.youtube.com/vi/OKuiyX5k6zg/0.jpg" alt="Video Thumbnail">
+                <p>Lecture 1: Introduction to Data Structures</p>
+            </div>
+            <div class="playlist-item" data-video="https://www.youtube.com/embed/_uQrJ0TkZlc">
+                <img src="https://img.youtube.com/vi/_uQrJ0TkZlc/0.jpg" alt="Video Thumbnail">
+                <p>Lecture 2: Algorithm Complexity (Time & Space)</p>
+            </div>
+            <div class="playlist-item" data-video="https://www.youtube.com/embed/kqtD5dpn9C8">
+                <img src="https://img.youtube.com/vi/kqtD5dpn9C8/0.jpg" alt="Video Thumbnail">
+                <p>Lecture 3: Data Structure Searching</p>
+            </div>
+            <div class="playlist-item" data-video="https://www.youtube.com/embed/OKuiyX5k6zg">
+                <img src="https://img.youtube.com/vi/OKuiyX5k6zg/0.jpg" alt="Video Thumbnail">
+                <p>Lecture 4: Sorting (Bubble, Insertion, Selection)</p>
+            </div>
+            <div class="playlist-item" data-video="https://www.youtube.com/embed/_uQrJ0TkZlc">
+                <img src="https://img.youtube.com/vi/_uQrJ0TkZlc/0.jpg" alt="Video Thumbnail">
+                <p>Lecture 5: Difference Between Stack and Queue</p>
+            </div>
         </div>
     </div>
+    <script src="/js/humberger.js"></script>
+    <script>
+        // Change video on clicking playlist item
+        const playlistItems = document.querySelectorAll('.playlist-item');
+        const mainVideo = document.getElementById('main-video');
+
+        playlistItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const videoSrc = item.getAttribute('data-video');
+                mainVideo.src = videoSrc;
+            });
+        });
+    </script>
 
 </body>
 

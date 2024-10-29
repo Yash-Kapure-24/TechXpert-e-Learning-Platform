@@ -333,6 +333,11 @@ main {
   background-color: #949494;
 }
 
+.overlay .left h1{
+  font-size: 202%;
+  margin-bottom: 15px;
+}
+
 
 .right img {
   width: 34%;
@@ -350,10 +355,10 @@ main {
   }
 
   .overlay .left {
-    margin-top: 35%;
-    padding: 49px;
-    text-align: center;
-    margin-left: 54px;
+    margin-top: 32%;
+    padding: 20px;
+    text-align: left;
+    margin-left: 45px;
   }
 
   .overlay .left h1 {
@@ -375,8 +380,8 @@ main {
   }
 
   .right img {
-    width: 85%;
-    margin-top: 20px;
+    width: 86%;
+    margin-top: -20px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -483,14 +488,17 @@ main {
 @media (max-width: 767px) {
   .skill-section h1 {
     font-size: 1.8em;
-    margin-top: 75%;
+    margin-top: 30%;
     margin-left: 40px;
+    font-weight: 500;
+    padding: 15px;
   }
 
   .skill-section p {
     font-size: 1em;
     margin-top: 5px;
     margin-left: 13%;
+    padding: 15px;
   }
 
   .skill-section .categories {
@@ -585,13 +593,18 @@ main {
 /* Mobile devices - Screens smaller than 767px */
 @media (max-width: 767px) {
   .banner {
-    padding: 20px 10px;
-    margin-left: 9%;
+    padding: 30px;
+    margin-left: 10%;
+  }
+
+  .banner h1{
+    font-size: 30px;
+    
   }
 
   .banner h2 {
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   .logo-container img {
@@ -826,7 +839,7 @@ main {
 @media (max-width: 767px) {
   .container-upskill {
     flex-direction: column;
-    padding: 20px;
+    padding: 50px;
   }
 
   .container-upskill .text-content {
@@ -899,7 +912,7 @@ main {
 @media (max-width:720px) {
   .footer {
     text-align: left;
-    padding: 5%;
+    padding: 15%;
   }
 
   .footer .row ul li {

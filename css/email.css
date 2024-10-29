@@ -1,9 +1,9 @@
 .email-form {
-    background-color: #c4c0c0;
+    background-color: #cce5ff;
     padding: 20px;
     margin: 90px auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 24%);
     max-width: 600px;
 }
 
@@ -70,6 +70,6 @@
     font-size: 16px;
     margin-bottom: 15px;
     width: 100%;
-    color:rgb(8, 0, 232);
+    color: rgb(8, 0, 232);
     border-radius: 0px;
 }

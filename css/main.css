@@ -717,7 +717,6 @@ a{
 .course p {
   text-align: center;
   font-size: 2rem;
-  font-style: italic;
   color: #000000;
 }
 
@@ -783,7 +782,7 @@ a{
 .course .card span {
   font-size: 0.9rem;
   color: #000;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 .course .card .checked {

@@ -132,6 +132,7 @@ a{
   align-items: center;
   background-color: #000000;
   position: fixed;
+  gap: 40px;
   top: 0;
   left: 0;
   width: 100%;
@@ -195,26 +196,6 @@ a{
   margin-bottom: -5px;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #ffffff;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-content a {
-  padding: 12px 16px;
-  display: block;
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
 
 /* Responsive Design */
 
@@ -303,6 +284,7 @@ a{
   background-color: #fff;
   color: #000;
   z-index: 1;
+  margin-top: 30px;
   animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
 }
 
@@ -793,6 +775,7 @@ a{
 .course .card h2 {
   font-size: 1rem;
   font-weight: bold;
+  padding-left: 30px;
   color: #000;
   margin-top: 10px;
 }
@@ -800,10 +783,12 @@ a{
 .course .card span {
   font-size: 0.9rem;
   color: #000;
+  padding-left: 30px;
 }
 
 .course .card .checked {
   color: orange;
+  padding-left: 0px;
 }
 
 .course .card .price {

@@ -1,217 +1,540 @@
-    .heading {
-        margin-left: 0%;
-        margin-top: 0%;
-        margin-bottom: 5%;
-        padding-right: 55%;
-        background-color: #929AAB;
-        height: 325px;
-        color: #000000;
-    }
+/* Course Section */
+.course-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    padding-top: 5%;
+    border-bottom: 2px solid #444;
+    background-color: #1a1a1a;
+    transition: background-color 0.3s ease-in-out;
+}
 
-    .text {
-        margin-left: 11%;
-        margin-top: 54px;
-    }
+.course-section:hover {
+    background-color: #222;
+}
 
-    .short-language {
-        margin-top: -5%;
-        margin-left: 78%;
-    }
+/* Breadcrumbs */
+.breadcrumbs a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.breadcrumbs a:hover {
+    color: #000000;
+}
+
+/* Course Content */
+.course-content {
+    flex: 2;
+    padding-right: 20px;
+    margin-top: 40px;
+}
+
+.course-content h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin: 10px 0 20px;
+    line-height: 1.6;
+}
+
+.course-meta span {
+    display: block;
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.course-meta a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.course-meta a:hover {
+    text-decoration: underline;
+}
+
+.course-meta .rating {
+    color: #fbc02d;
+}
+
+.course-meta .students {
+    color: #76ff03;
+}
+
+/* Course Preview */
+/* Card Container */
+.course-card-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -100px;
+    margin-right: 35px;
+}
+
+.course-card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Card Header */
+.card-header {
+    text-align: center;
+    position: relative;
+}
+
+.card-header img {
+    width: 100%;
+    height: auto;
+}
+
+.preview-btn {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6a1b9a;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.preview-btn:hover {
+    background-color: #8e24aa;
+}
+
+/* pop-up video */
 
 
-    /* Media queries for responsive design */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
 
-    /* For small screens like mobile phones */
-    @media (max-width: 576px) {
-        .heading {
-            padding-right: 0;
-        }
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2d2d2d;
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
 
-        .text {
-            margin-left: 5%;
-        }
+.popup-content iframe {
+    width: 100%;
+    /* Make the iframe responsive */
+    height: 315px;
+    /* Default height */
+}
 
-        .short-language {
-            margin-top: 2%;
-            margin-left: 5%;
-        }
-    }
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: gray;
+    border-radius: 50px;
+    padding: 5px 10px;
+    /* Add some padding */
+}
 
-    /* For medium screens like tablets */
-    @media (min-width: 577px) and (max-width: 992px) {
-        .heading {
-            padding-right: 30%;
-        }
-
-        .text {
-            margin-left: 8%;
-        }
-
-        .short-language {
-            margin-top: 2%;
-            margin-left: 70%;
-        }
-    }
-
-    /* For large screens like desktops */
-    @media (min-width: 993px) {
-        .heading {
-            margin-bottom: 3%;
-            padding-right: 55%;
-        }
-
-        .text {
-            margin-left: 11%;
-        }
-
-        .short-language {
-            margin-top: -5%;
-            margin-left: 78%;
-        }
-    }
-
-    .container {
-        color: #ffffff;
-        max-width: 25%;
-        margin-top: -15%;
-        margin-right: 5%;
-        margin-bottom: 10%;
-        padding: 1px;
-        float: inline-end;
-        text-align: center;
-        background-color: #00000091;
-        border-radius: 15px;
-    }
-
-    .video-preview {
-        position: relative;
-        display: inline-block;
-    }
-
-    .video-preview img {
-        width: 83%;
-        max-width: 400px;
-        margin: 20px;
-    }
-
-    .play-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .play-button img {
-        width: 40px;
-        height: 40px;
-        margin-top: -50%;
-        margin-bottom: 10%;
-    }
-
-    .pricing {
-        display: flex;
-        justify-content: center;
-        margin-top: 0px;
-    }
-
-    .pricing-option {
-        color: #000000;
-        padding: 10px;
-        border-radius: 5px;
-        margin: 8px 10px;
-        width: 70%;
-    }
-
-    .pricing-option.teams {
-        background-color: transparent;
-        color: #fff;
-        border: 1px solid #fff;
-    }
-
-    .price {
-        font-size: 24px;
-        font-weight: bold;
-        margin: 10px;
-    }
-
-    .original-price {
-        text-decoration: line-through;
-        font-size: 14px;
-        margin-left: 5px;
-    }
-
-    .discount {
-        background-color: #27ae60;
-        color: #fff;
-        border-radius: 3px;
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .countdown {
-        font-size: 17px;
-        color: #e74c3c;
-        margin-top: 10%;
-    }
-
-    .buy-button {
-        background-color: #929AAB;
-        color: #000000;
-        border: none;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #playButton {
         padding: 10px 20px;
         font-size: 16px;
-        margin-top: 5px;
-        cursor: pointer;
-        border-radius: 6px;
     }
 
-    .guarantee,
-    .access {
-        font-size: 12px;
-        margin: 5px 0;
+    .popup-content {
+        padding: 10px;
+        width: 80%;
     }
 
-
-    /* Media queries for responsive design */
-
-    /* For small screens like mobile phones */
-    @media (max-width: 576px) {
-        .container {
-            max-width: 50%;
-            margin-top: 0;
-            margin-right: 40px;
-            float: inline-end;
-        }
-
-        .play-button img {
-            width: 30px;
-            height: 30px;
-            margin-top: -30%;
-            margin-bottom: 5%;
-        }
-
-        .pricing {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .pricing-option {
-            margin: 10px 0;
-        }
+    .close {
+        font-size: 20px;
+        padding: 4px 8px;
     }
 
-    /* For medium screens like tablets */
-    @media (min-width: 577px) and (max-width: 892px) {
-        .container {
-            max-width: 40%;
-            margin-top: -10%;
-            margin-right: 5%;
-        }
-
-        .play-button img {
-            width: 35px;
-            height: 35px;
-            margin-top: -40%;
-            margin-bottom: 8%;
-        }
+    .popup-content iframe {
+        height: 330px;
+        /* Adjust height for smaller screens */
     }
+}
+
+@media (max-width: 480px) {
+    #playButton {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .popup-content {
+        padding: 5px;
+        width: 90%;
+    }
+
+    .close {
+        font-size: 18px;
+        padding: 3px 6px;
+    }
+
+    .popup-content iframe {
+        height: 230px;
+        /* Further adjust height for very small screens */
+    }
+}
+
+/* Tabs Section */
+.card-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.tab.active {
+    background-color: #fff;
+    border-bottom: 2px solid #6a1b9a;
+}
+
+.tab:hover {
+    background-color: #f1f1f1;
+}
+
+/* Card Content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.card-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+.btn-subscribe {
+    width: 100%;
+    background-color: #6a1b9a;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #8e24aa;
+}
+
+.subscription-info {
+    font-size: 0.8rem;
+    color: #999;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px 0;
+    color: #333;
+}
+
+.btn-add-to-cart {
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #218838;
+}
+
+.guarantee {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+}
+
+.coupon-section {
+    margin-top: 15px;
+}
+
+.coupon-section p {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.apply-coupon {
+    display: flex;
+    margin-top: 5px;
+}
+
+.apply-coupon input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    padding: 8px;
+}
+
+.apply-coupon button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-coupon button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px){
+    .course-card {
+        width: 100%;
+        margin: 0;
+        margin-top: 27%;
+        margin-left: 27px;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-section {
+        flex-direction: column;
+    }
+
+    .course-content {
+        padding-right: 0;
+        margin-top: 70px;
+    }
+
+    .course-card-container {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .course-description {
+        font-size: 1rem;
+    }
+
+    .course-card {
+        width: 100%;
+        margin: 0;
+        margin-top: 27%;
+        margin-left: 27px;
+    }
+}
+
+/* course details */
+
+.course-details {
+    color: #000;
+    width: 60%;
+    max-width: 1000px;
+    margin-left: 40px;
+    margin-top: -600px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.course-details h2,
+.course-details h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.what-you-learn ul,
+.course-includes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.what-you-learn ul li::before {
+    content: '✅ ';
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+.explore-topics .topics {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.explore-topics .topics span {
+    padding: 5px 10px;
+    background-color: #efefef;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.course-includes ul li {
+    margin: 8px 0;
+}
+
+.top-companies {
+    margin-top: 20px;
+}
+
+.top-companies strong {
+    font-weight: bold;
+}
+
+.top-companies p {
+    margin-bottom: 10px;
+}
+
+.top-companies .company-logos {
+    display: flex;
+    gap: 15px;
+}
+
+.top-companies img {
+    height: 30px;
+}
+
+/* Medium Screens: Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .course-details {
+        padding: 15px;
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    .explore-topics .topics {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .top-companies .company-logos {
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .top-companies img {
+        height: 25px;
+    }
+}
+
+/* Small Screens: Mobile Phones (480px - 767px) */
+@media (max-width: 767px) {
+    .course-details {
+        padding: 10px;
+        margin-top: 50px;
+        width: 80%;
+    }
+
+    h2,
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .explore-topics .topics span {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+
+    .top-companies .company-logos {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .top-companies img {
+        height: 20px;
+    }
+}
+
+/* Extra Small Screens: Narrow Mobile Phones (Up to 479px) */
+@media (max-width: 479px) {
+
+    h2,
+    h3 {
+        font-size: 1em;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
+
+    .explore-topics .topics span {
+        font-size: 0.7em;
+    }
+
+    .top-companies img {
+        height: 18px;
+    }
+}

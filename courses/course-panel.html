@@ -56,52 +56,116 @@
     </nav>
   </header>
 
-  <main>
-    <section class="heading"><br><br><br>
-      <div class="text">
-        <h1>Web Development full Course</h1>
-        <span>10 Hours of React just added. Become a Developer With ONE course - HTML, CSS, JavaScript, React, Node,
-          MongoDB and More!</span><br><br>
-        <p>
-          <span><b style="color: rgb(255, 255, 255);">4.7</b> <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-          </span>(206,777) 23,583 students
-        </p>
-        <p class="short-language">
-          <i class="fa fa-globe"></i> English
-        </p>
-      </div><br><br><br>
-    </section>
-
-    <div class="container">
-      <div class="video-preview">
-        <img src="https://smartifysol.com/wp-content/uploads/2023/09/development.jpeg" alt="Video Preview">
-        <div class="play-button">
-          <img src="https://img.icons8.com/?size=100&id=K25Bc22Gr3Zg&format=png&color=000000" alt="Play Button">
-        </div>
-        <p style="font-size: 105%;">
-        <h3><b>View Content</b></h3>
-        </p>
+  <section class="course-section">
+    <div class="course-content">
+      <h1>Complete web development course</h1>
+      <p class="course-description">
+        Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma,
+        Deployment, etc.
+      </p>
+      <div class="course-meta">
+        <span class="rating">4.7 ★★★★★ (4,533 ratings)</span>
+        <span class="students">20,100 students</span>
+        <p class="creator">Created by <a href="#">Hitesh Choudhary</a></p>
+        <p class="details">Last updated 12/2024 • English</p>
       </div>
-      <hr width="100%">
-      <div class="pricing">
-        <div class="pricing-option">
-          <h3>Personal</h3>
-          <span class="price">₹1500</span>
-          <span class="original-price">₹3,099</span>
-          <span class="discount">70% off</span>
-          <p class="countdown">1 day left at this price!</p>
-        </div>
-      </div>
-      <a href="/Payment/checkout.html"><button class="buy-button">Buy This Course</button></a>
-      <p class="guarantee">30-Day Money-Back Guarantee</p>
-      <p class="access">Full Lifetime Access</p>
     </div>
-  </main>
+    <!-- Course preview -->
+  </section>
+
+  <div class="course-card-container">
+    <div class="course-card">
+      <div class="card-header">
+        <img src="https://www.clariwell.in/resources/best-web-development-course-top-training-institute-in-pune.webp"
+          alt="Course Thumbnail">
+        <button class="preview-btn" id="playButton"><i class="fa-solid fa-play" style="color: #ffffff;"></i></button>
+
+        <!-- pop-up video -->
+
+        <div id="videoPopup" class="popup">
+          <div class="popup-content">
+            <span class="close" id="closeButton">×</span>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NkwFxeHARqc?si=D9_Yn3d1HMkJA7A4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-tabs">
+        <button class="tab active" onclick="switchContent('personal')">Personal</button>
+        <button class="tab" onclick="switchContent('teams')">Teams</button>
+      </div>
+
+      <div id="card-content" class="card-content">
+        <!-- Default content for Personal -->
+        <h3>Subscribe to Udemy's top courses</h3>
+        <p>Get this course, plus 12,000+ of our top-rated courses, with Personal Plan.</p>
+        <button class="btn-subscribe">Start subscription</button>
+        <p class="subscription-info">Starting at ₹850 per month<br>Cancel anytime</p>
+        <hr>
+        <p class="price">₹1,999</p>
+        <button class="btn-add-to-cart">Add to cart</button>
+        <p class="guarantee">30-Day Money-Back Guarantee<br>Full Lifetime Access</p>
+        <div class="coupon-section">
+          <p>KEEPLEARNING is applied</p>
+          <div class="apply-coupon">
+            <input type="text" placeholder="Enter Coupon">
+            <button class="btn-apply">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="course-details">
+    <div class="what-you-learn">
+      <h2>What you'll learn</h2>
+      <ul>
+        <li>✅ Become a full stack developer</li>
+        <li>✅ Build any project for your company or for freelance projects</li>
+        <li>✅ Master of Javascript ecosystem</li>
+        <li>✅ Full stack with MERN, GIT and many advanced topics</li>
+      </ul>
+    </div>
+
+    <div class="explore-topics">
+      <h3>Explore related topics</h3>
+      <div class="topics">
+        <span>Web Development</span>
+        <span>Development</span>
+      </div>
+    </div>
+
+    <div class="course-includes">
+      <h3>This course includes:</h3>
+      <ul>
+        <li>70.5 hours on-demand video</li>
+        <li>20 downloadable resources</li>
+        <li>45 coding exercises</li>
+        <li>Access on mobile and TV</li>
+        <li>3 articles</li>
+        <li>Certificate of completion</li>
+      </ul>
+    </div>
+
+    <div class="top-companies">
+      <p>
+        <strong>Top companies offer this course to their employees</strong>
+        <br>
+        This course was selected for our collection of top-rated courses trusted by businesses worldwide.
+        <a href="#">Learn more</a>
+      </p>
+      <div class="company-logos">
+        <img src="/images/nasdaq-dark.svg" alt="Nasdaq">
+        <img src="/images/volkswagen-dark.svg" alt="Volkswagen">
+        <img src="/images/netapp-dark.svg" alt="Box">
+        <img src="/images/box-dark.svg" alt="NetApp">
+        <img src="/images/eventbrite-dark.svg" alt="Eventbrite">
+      </div>
+    </div>
+  </section>
+  <script src="https://kit.fontawesome.com/5613199f3f.js" crossorigin="anonymous"></script>
   <script src="/js/humberger.js"></script>
+  <script src="/js/course-panel.js"></script>
 </body>
 
 </html>
